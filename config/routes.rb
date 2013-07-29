@@ -1,4 +1,10 @@
 MentorMatch::Application.routes.draw do
+  root :to => "mentors#index"
+
+  resources :mentors
+  resources :mentees
+  resources :mentorships
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
