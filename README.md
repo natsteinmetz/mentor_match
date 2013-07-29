@@ -6,5 +6,5 @@ Also, it uses a main controller to generate a main view that contains elements f
 
 
 
-lib/assets/screenshot_mentor_match.png
+![screenshot mentor match] (lib/assets/screenshot_mentor_match.png)
 
