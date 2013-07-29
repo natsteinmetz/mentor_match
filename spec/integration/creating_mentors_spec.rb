@@ -15,7 +15,7 @@ feature 'Creating Mentor' do
     page.should have_content('Mentor has been created.')
 
     mentor = Mentor.find_by_name('Test Mentor')
-    page.current_url.should == talk_url(mentor)
+    page.current_url.should == mentor_url(mentor)
     title = "Test Mentor - Mentors - Mentor Mentee Matchmaking"
     find("title").should have_content(title)
   end
@@ -23,7 +23,8 @@ feature 'Creating Mentor' do
   scenario "can not create a mentor without a title" do
     click_button "Create Mentor"
     page.should have_content("Mentor has not been created.")
-    page.should have_content("Name can't be blank.")
+    page.should have_content("Name can't be blank")
+    page.should have_content("Email can't be blank")
   end
 end
 

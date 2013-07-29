@@ -1,0 +1,16 @@
+<%= link_to "New Mentor", new_mentor_path %>
+<br>
+<br>
+<h2>Mentors</h2>
+<br>
+<ul>
+  <br>
+  <% @mentors.each do |mentor| %>
+    <li><%= link_to mentor.name, mentor %> |
+      <%= mentor.email %> |
+      <%= mentor.affiliation %>
+    </li>
+    <br>
+  <% end %>
+</ul>
+

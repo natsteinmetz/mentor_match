@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MentorMatch</title>
+  <title>
+    <% if content_for?(:title) %>
+      <%= yield(:title) %>
+    <% else %>
+      Mentor Mentee Matchmaking
+    <% end %>
+  </title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+  <h1>Mentor-Mentee Matchmaking</h1>
+  <br>
+
+  <% flash.each do |key, value| %>
+    <div class='flash' id='<%= key %>'>
+      <%= value %>
+    </div>
+  <% end %>
+
+  <br>
+
 <%= yield %>
+
+  <br>
+  <br>
+  <div>
+    <hr>
+    <%= link_to "See all mentors", mentors_path(:mentor) %> |
+    <%= link_to "See all mentees", mentees_path(:mentee) %>
+  </div>
 
 </body>
 </html>
