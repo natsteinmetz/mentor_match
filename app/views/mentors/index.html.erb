@@ -7,8 +7,10 @@
   <br>
   <% @mentors.each do |mentor| %>
     <li><%= link_to mentor.name, mentor %> |
-      <%= mentor.email %> |
-      <%= mentor.affiliation %>
+      Email: <%= mentor.email %>
+      <% if mentor.affiliation != "" %>
+        | Affiliation: <%= mentor.affiliation %>
+      <% end %>
     </li>
     <br>
   <% end %>

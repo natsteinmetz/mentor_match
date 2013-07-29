@@ -11,7 +11,6 @@ feature 'Creating Mentee' do
   scenario 'can create a mentee' do
     fill_in 'Name', :with => 'Test Mentee'
     fill_in 'Email', :with => 'mentee@mentee.com'
-    fill_in 'Goal', :with => 'Test Goal'
     click_button 'Create Mentee'
     page.should have_content('Mentee has been created.')
 

@@ -1,19 +1,20 @@
 <h2>New Mentee</h2>
 <%= form_for(@mentee) do |f| %>
   <%= f.error_messages %>
+  <br>
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name %>    <%= f.text_field :name %>
+    <br><br>
   </p>
 
   <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label :email %>   <%= f.text_field :email %>
+    <br><br>
   </p>
 
   <p>
-    <%= f.label :goal %><br />
-    <%= f.text_field :goal %>
+    <%= f.label :goal %>    <%= f.select(:goal, options_for_select(APP[:goals], APP[:goals][3])) %>
+    <br><br>
   </p>
 
   <%= f.submit %>

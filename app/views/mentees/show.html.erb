@@ -1,8 +1,10 @@
 
 <% title(@mentee.name, "Mentees") %>
-<h2><%= @mentee.name %> </h2>
-Email: <%= @mentee.email %> |
-Goal: <%= @mentee.goal %>
+<h3><%= @mentee.name %> </h3>
+Email: <%= @mentee.email %>
+<% if @mentee.goal != "" %>
+  | Goal: <%= @mentee.goal %>
+<% end %>
 <br>
 <br>
 <%= link_to "Edit Mentee", edit_mentee_path(@mentee) %> |
@@ -13,18 +15,22 @@ Goal: <%= @mentee.goal %>
 <br>
 <h4>Assigned mentors:</h4>
 <br>
-<ul style="height: 50px">
-  <% @mentee.mentors.each do |mentor| %>
-    <li style="height: 25px"><%= link_to mentor.title, mentor_path %>  |
-      <% mentor.mentorships.each do |mentorship| %>
-        <% if mentorship.mentee_id == @mentee.id %>
-          <%= link_to "Remove Mentor", mentorship_path(mentorship),
-            :method => :delete,
-            :confirm => "Are you sure you want to remove this mentor?" %> </li>
+<% if @mentee.mentors.size == 0 %>
+  No mentors assigned so far <br>
+<% else %>
+  <ul style="height: 50px">
+    <% @mentee.mentors.each do |mentor| %>
+      <li style="height: 25px"><%= link_to mentor.title, mentor_path %>  |
+        <% mentor.mentorships.each do |mentorship| %>
+          <% if mentorship.mentee_id == @mentee.id %>
+            <%= link_to "Remove Mentor", mentorship_path(mentorship),
+              :method => :delete,
+              :confirm => "Are you sure you want to remove this mentor?" %> </li>
+          <% end %>
         <% end %>
-      <% end %>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+<% end %>
 
 <br>
 <div>

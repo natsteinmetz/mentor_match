@@ -1,27 +1,26 @@
 <h2>Add Mentorship Associations</h2>
-
+<br><br>
 <%= form_for(@mentorship) do |f| %>
   <p>
     <%= f.label :mentor, "Mentor" %>
     <% mentors = @mentors.map {|mentor| [mentor.name, mentor.id] }%>
-    <%= f.select(:mentor_id, options_for_select(mentors)) %> <br>
+    <%= f.select(:mentor_id, options_for_select(mentors)) %>
   </p>
-
+  <br><br>
   <p>
-    <%= f.label :started, "Started at: " %>
-    <%= f.date_select :started %>
+    <%= f.label :started, "Started at: " %> <%= f.date_select :started %>
   </p>
+  <br><br>
   <p>
-    <%= f.label :kind, "Kind of mentorship: " %>
-    <%= f.text_field :kind %>
+    <%= f.label :kind, "Kind of mentorship: " %> <%= f.select(:kind, options_for_select(APP[:mentorship_kinds])) %>
   </p>
-
+  <br><br>
   <p>
     <%= f.label :mentee, "Mentee" %>
     <% mentees = @mentees.map {|mentee| [mentee.name, mentee.id] }%>
     <%= f.select(:mentee_id, options_for_select(mentees)) %> <br>
   </p>
-
+  <br><br>
   <%= f.submit "Submit" %>
 
 <% end -%>

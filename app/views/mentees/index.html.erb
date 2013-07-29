@@ -6,8 +6,10 @@
 <ul>
   <% @mentees.each do |mentee| %>
     <li><%= link_to mentee.name, mentee %> |
-      <%= mentee.email %> |
-      <%= mentee.goal %>
+      Email: <%= mentee.email %>
+      <% if mentee.goal != "" %>
+        | Goal: <%= mentee.goal %>
+      <% end %>
     </li>
     <br>
   <% end %>
