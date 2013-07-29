@@ -20,7 +20,7 @@ Email: <%= @mentee.email %>
 <% else %>
   <ul style="height: 50px">
     <% @mentee.mentors.each do |mentor| %>
-      <li style="height: 25px"><%= link_to mentor.title, mentor_path %>  |
+      <li style="height: 25px"><%= link_to mentor.name, mentor_path %>  |
         <% mentor.mentorships.each do |mentorship| %>
           <% if mentorship.mentee_id == @mentee.id %>
             <%= link_to "Remove Mentor", mentorship_path(mentorship),

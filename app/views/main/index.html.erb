@@ -1,0 +1,42 @@
+<br>
+<br>
+<div id="main_left">
+  <h2>Mentors</h2>
+  <br>
+  <ul>
+    <br>
+    <% @mentors.each do |mentor| %>
+      <li><%= link_to mentor.name, mentor %> |
+        Email: <%= mentor.email %>
+        <% if mentor.affiliation != "" %>
+          | Affiliation: <%= mentor.affiliation %>
+        <% end %>
+      </li>
+      <br>
+    <% end %>
+  </ul>
+  <br>
+  <%= link_to "New Mentor", new_mentor_path %>
+</div>
+<br>
+<br>
+<div id="main_right">
+  <h2>Mentees</h2>
+  <br>
+  <ul>
+    <br>
+    <% @mentees.each do |mentee| %>
+      <li><%= link_to mentee.name, mentee %> |
+        Email: <%= mentee.email %>
+        <% if mentee.goal != "" %>
+          | Goal: <%= mentee.goal %>
+        <% end %>
+      </li>
+      <br>
+    <% end %>
+  </ul>
+  <br>
+  <%= link_to "New Mentor", new_mentor_path %>
+</div>
+<br><br>
+

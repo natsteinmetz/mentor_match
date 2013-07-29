@@ -18,6 +18,7 @@ body {
 
 h1 {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 nav {
@@ -37,6 +38,23 @@ textarea {
 input[type=file] {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#main_left {
+  float: left;
+  /*margin-right: 20px;*/
+  padding-top: 40px;
+  width: 400px;
+}
+
+#main_right {
+  float: right;
+  width: 400px;
+}
+
+#footer {
+    padding-top: 50px;
+    clear: both;
 }
 
 .flash {

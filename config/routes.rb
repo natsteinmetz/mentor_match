@@ -1,5 +1,5 @@
 MentorMatch::Application.routes.draw do
-  root :to => "mentors#index"
+  root :to => "main#index"
 
   resources :mentors
   resources :mentees
