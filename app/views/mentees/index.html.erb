@@ -1,0 +1,15 @@
+<%= link_to "New Mentee", new_mentee_path %>
+<br>
+<br>
+<h2>Mentees</h2>
+<br>
+<ul>
+  <% @mentees.each do |mentee| %>
+    <li><%= link_to mentee.name, mentee %> |
+      <%= mentee.email %> |
+      <%= mentee.goal %>
+    </li>
+    <br>
+  <% end %>
+</ul>
+

@@ -1,0 +1,21 @@
+<h2>New Mentee</h2>
+<%= form_for(@mentee) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :goal %><br />
+    <%= f.text_field :goal %>
+  </p>
+
+  <%= f.submit %>
+<% end %>
+

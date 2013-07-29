@@ -1,0 +1,33 @@
+
+<% title(@mentee.name, "Mentees") %>
+<h2><%= @mentee.name %> </h2>
+Email: <%= @mentee.email %> |
+Goal: <%= @mentee.goal %>
+<br>
+<br>
+<%= link_to "Edit Mentee", edit_mentee_path(@mentee) %> |
+<%= link_to "Delete Mentee", mentee_path(@mentee),
+    :method => :delete,
+    :confirm => "Are you sure you want to delete this mentee?" %>
+<br>
+<br>
+<h4>Assigned mentors:</h4>
+<br>
+<ul style="height: 50px">
+  <% @mentee.mentors.each do |mentor| %>
+    <li style="height: 25px"><%= link_to mentor.title, mentor_path %>  |
+      <% mentor.mentorships.each do |mentorship| %>
+        <% if mentorship.mentee_id == @mentee.id %>
+          <%= link_to "Remove Mentor", mentorship_path(mentorship),
+            :method => :delete,
+            :confirm => "Are you sure you want to remove this mentor?" %> </li>
+        <% end %>
+      <% end %>
+  <% end %>
+</ul>
+
+<br>
+<div>
+  <%= link_to "Add Mentor", new_mentorship_path %>
+</div>
+
