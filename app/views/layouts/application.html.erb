@@ -19,7 +19,8 @@
       Signed in as <%= current_user.name %>!
       <%= link_to "Sign out", signout_path %>
     <% else %>
-      <%= link_to "Sign in with LinkedIn", "/auth/linkedin" %>
+      <%= link_to (image_tag("signin_with_linkedin.png", :alt => "singin with linkedin")), "/auth/linkedin" %>
+      <%# link_to "Sign in with LinkedIn", "/auth/linkedin" %>
     <% end %>
   </div>
   <br>
