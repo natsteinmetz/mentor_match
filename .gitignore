@@ -16,3 +16,6 @@
 
 # Ignore environment configs 
 .env
+
+#Ignore all automatic mac files
+.DS_Store
