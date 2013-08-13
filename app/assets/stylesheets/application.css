@@ -25,6 +25,10 @@ nav {
     margin: 10px 0 10px 0;
 }
 
+#user-nav {
+    float: right;
+}
+
 a {
     color: #74CC00;
 }

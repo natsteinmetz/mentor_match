@@ -14,6 +14,17 @@
 </head>
 <body>
 
+  <div id='user-nav'>
+    <% if current_user %>
+      Signed in as <%= current_user.name %>!
+      <%= link_to "Sign out", signout_path %>
+    <% else %>
+      <%= link_to "Sign in with LinkedIn", "/auth/linkedin" %>
+    <% end %>
+  </div>
+  <br>
+  <br>
+
   <h1>Mentor-Mentee Matchmaking</h1>
   <br>
 

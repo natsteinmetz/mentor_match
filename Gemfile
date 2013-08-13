@@ -5,6 +5,8 @@ ruby '2.0.0'
 gem 'rails', '3.2.13'
 gem 'dynamic_form', '1.1.4'
 
+gem 'omniauth-linkedin-oauth2'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -46,6 +48,7 @@ group :test, :development do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.11'
   gem 'pry-rails' #REPL - read evaluate print loop
+  gem 'dotenv-rails'
 end
 
 group :test do
