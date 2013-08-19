@@ -58,3 +58,5 @@ group :test do
   gem 'simplecov', :require => false, :group => :test
 end
 
+gem 'newrelic_rpm'
+
