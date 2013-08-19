@@ -14,7 +14,7 @@
 /log/*.log
 /tmp
 
-# Ignore environment configs 
+# Ignore environment configs
 .env
 
 #Ignore all automatic mac files
