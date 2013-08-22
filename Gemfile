@@ -7,6 +7,8 @@ gem 'dynamic_form', '1.1.4'
 
 gem 'omniauth-linkedin-oauth2'
 
+gem 'mysql2', '0.3.13'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
