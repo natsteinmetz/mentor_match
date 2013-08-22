@@ -19,3 +19,4 @@
 
 #Ignore all automatic mac files
 .DS_Store
+.elasticbeanstalk/
