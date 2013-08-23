@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 gem 'dynamic_form', '1.1.4'
 
 gem 'omniauth-linkedin-oauth2'
 
-gem 'mysql2', '0.3.13'
+gem 'mysql2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
