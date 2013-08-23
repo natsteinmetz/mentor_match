@@ -7,8 +7,6 @@ gem 'dynamic_form', '1.1.4'
 
 gem 'omniauth-linkedin-oauth2'
 
-gem 'mysql2'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -43,7 +41,8 @@ gem 'jquery-rails'
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
+  gem 'mysql2'
+#  gem 'pg'
 end
 
 group :test, :development do
